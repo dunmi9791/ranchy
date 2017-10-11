@@ -4,7 +4,7 @@
     
     
     
-    <act_window id="ranchy.action_window" name="ranchy" res_model="members.ranchy" view_mode="tree,form" />
+    <act_window id="ranchy.action_window" name="ranchy" res_model="members.ranchy" view_mode="tree,form"/>
     
     <menuitem action="ranchy.action_window" name="ranchy" id="ranchy.menu_root" sequence ="450"/>
     <menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root"/>
