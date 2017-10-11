@@ -18,7 +18,7 @@
              <field name="member_firstname"/>
              <field name="member_lastname"/>
              <field name="member_addresss"/>
-             
+             <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}"/>
            
            </form>
          
