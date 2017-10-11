@@ -11,9 +11,9 @@
     <menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root"/>
     
     
-    <record id="ranchymembersform" model="ir.ui.view" string="ranchymembers">
-            <field name="model">members.ranchy</field>
-            <field name="ach" type="xml">
+            <record id="ranchymembersform" model="ir.ui.view" string="ranchymembers">
+                <field name="model">members.ranchy</field>
+                <field name="ach" type="xml">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
