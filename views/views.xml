@@ -13,7 +13,7 @@
    <field name="inherit_id" ref="base.view_partner_form" />
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
-         <field name="list_price" position="after">
+        
            
              <field name="member_firstname"/>
              <field name="member_lastname"/>
@@ -21,7 +21,7 @@
              <field name="member_pic" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}"/>
            
            
-         </field>
+         
    </field>
    </record>
     
