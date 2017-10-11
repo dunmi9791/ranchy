@@ -8,7 +8,7 @@
     view_mode="tree,form" />
     
     <menuitem action="ranchy.action_window" name="ranchy" id="ranchy.menu_root" sequence ="450"/>
-    <menuitem name="Members" id="ranchy.members" parent="ranchy.menu_root"/>
+    <menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root"/>
     
     
   </data>
