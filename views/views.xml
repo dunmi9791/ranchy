@@ -13,6 +13,7 @@
     
     <record id="ranchymembersform" model="ir.ui.view" string="ranchymembers">
     <field name="model">members.ranchy</field>
+    <field name="view_type" >form</field>
     <field name="ach" type="xml">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
