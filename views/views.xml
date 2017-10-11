@@ -10,7 +10,7 @@
     
     
     <record id= "ranchy_members_template_form_view" model= "ir.ui.view">
-   <field name="inherit_id" ref="base.view_partner_form" />
+   
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
         
