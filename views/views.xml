@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <odoo>
- 
+ <data>
     
     
     <act_window id="ranchy.action_window" name="ranchy" res_model="members.ranchy" view_mode="tree,form"/>
@@ -43,5 +43,5 @@
     </record>
     
     
-  
+  </data>
 </odoo>
