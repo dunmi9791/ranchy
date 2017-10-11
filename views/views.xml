@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <odoo>
-  <data>
+ 
     
     
     
@@ -48,5 +48,5 @@
                 </record>
     
     
-  </data>
+  
 </odoo>
