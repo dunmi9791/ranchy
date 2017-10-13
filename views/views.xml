@@ -19,7 +19,7 @@
              <field name="member_lastname"/>
              <field name="member_addresss"/>
              <field name="member_phone"/>
-             <field name="member_pic"/>
+             
              
            
            </form>
