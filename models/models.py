@@ -6,12 +6,12 @@ class ranchy_members(models.Model):
     _name = 'members.ranchy'
     
     member_id = fields.Id
-    member_firstname = fields.Char("FirstName")
-    member_lastname = fields.Char("Last")
-    member_addresss = fields.Text("Address")
-    member_phone = fields.Char
-    member_pic = fields.Binary
-    memberof = fields.Many2one
+    member_firstname = fields.Char(string="FirstName")
+    member_lastname = fields.Char(string="Last")
+    member_addresss = fields.Text(string="Address")
+    member_phone = fields.Char(string="phone number")
+    member_pic = fields.Binary(string="picture")
+    memberof = fields.Many2one('corps.ranchy')
     
 class ranchy_corps(models.Model): 
     _name = 'corps.ranchy'
