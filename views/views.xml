@@ -52,7 +52,7 @@
             <!-- Add All Fields You Want In The Form Here -->
             <field name="corps_name"/>
             <field name="corps_leader"/>
-            <field name="corps_staff"/>
+            
         </form>
     </field>
 </record>
