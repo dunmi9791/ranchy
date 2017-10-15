@@ -10,7 +10,7 @@ class ranchy_members(models.Model):
     member_lastname = fields.Char(string="Last")
     member_addresss = fields.Text(string="Address")
     member_phone = fields.Char(string="phone number")
-    member_pic = fields.Binary(string="picture")
+    member_pic = fields.Binary("image", help="select image here")
     memberof = fields.Many2one('corps.ranchy')
     
 class ranchy_corps(models.Model): 
