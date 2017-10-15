@@ -28,6 +28,26 @@
          
    </field>
    </record>
-    
+   
+   
+   <record id= "ranchy_members_template_tree_view" model= "ir.ui.view">
+   
+   <field name="model">members.ranchy</field >
+   <field name="arch" type= "xml">
+        
+           <tree>
+             <group>
+             <field name="member_pic" widget='image' />
+             <field name="member_firstname"/>
+             <field name="member_lastname"/>
+             <field name="member_addresss"/>
+             <field name="member_phone"/>
+             </group>
+             
+           
+           </tree>
+         
+   </field>
+   </record> 
 </data>
 </odoo>
