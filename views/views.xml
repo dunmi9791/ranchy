@@ -15,11 +15,12 @@
    <field name="arch" type= "xml">
         
            <form>
+             <group>
              <field name="member_firstname"/>
              <field name="member_lastname"/>
              <field name="member_addresss"/>
              <field name="member_phone"/>
-             
+             </group>
              
            
            </form>
