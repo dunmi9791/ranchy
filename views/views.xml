@@ -30,14 +30,14 @@
    </record>
    
    
-   <record id= "ranchy_members_template_tree_view" model= "ir.ui.view">
+   <record id= "ranchy_members_template_list_view" model= "ir.ui.view">
    
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
         
-           <tree>
+           <list>
              <group>
-             <field name="member_pic" widget='image' />
+             
              <field name="member_firstname"/>
              <field name="member_lastname"/>
              <field name="member_addresss"/>
@@ -45,7 +45,7 @@
              </group>
              
            
-           </tree>
+           </list>
          
    </field>
    </record> 
