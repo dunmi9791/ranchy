@@ -34,7 +34,7 @@
    <act_window id="ranchycorps.action_window" name="ranchycorps" res_model="corps.ranchy" view_mode="tree,form"/>
    
    
-   <menuitem action="ranchycorps.action_window" name="corperatives" id="ranchy.corps" parent="ranchy.menu_root"/>
+   <menuitem action="ranchycorps.action_window" name="ranchycorps" id="ranchy.corps" parent="ranchy.menu_root"/>
     
 </data>
 </odoo>
