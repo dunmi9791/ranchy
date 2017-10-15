@@ -16,11 +16,11 @@
         
            <form>
              <group>
+             <field name="member_pic" widget='image' />
              <field name="member_firstname"/>
              <field name="member_lastname"/>
              <field name="member_addresss"/>
              <field name="member_phone"/>
-             <field name="member_pic" widget='image' />
              </group>
              
            
