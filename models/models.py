@@ -17,8 +17,8 @@ class ranchy_corps(models.Model):
     _name = 'corps.ranchy'
     corps_id = fields.Id
     corps_name = fields.Char(string="name of coperative")
-    corps_leader = fields.One2many()
-    corps_staff = fields.One2many()
+    corps_leader = fields.One2many
+    corps_staff = fields.One2many
     
 class ranchy_loans(models.Model):
     _name = 'ranchy.loans'
