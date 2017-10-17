@@ -26,8 +26,7 @@ class ranchy_loans(models.Model):
     total_repayments = fields.Float(string="Total repayed")
     balance = fields.Float(string="Outstanding Balance")
     stage = fields.selection([('1st','2nd')])
-    amount = fields.Monetary(string="Amount",# optional: currency_field='currency_id')
-    disburse_date = fields.Date(string="Date of Disburse")
+  
     
     
     
