@@ -27,7 +27,7 @@ class ranchy_loans(models.Model):
     disburse_date = fields.Date(string="Date of Disburse")
     member_id = fields.Many2one('members.ranchy', string="Member")
     tenure = fields.Char(string="loan tenure")
-    stage = fields.selection(String="Stage",selection=[('1st','2nd','3rd','4th')])
+    
     total_repayments = fields.Float(string="Total repayed")
     balance = fields.Float(string="Outstanding Balance")
     
