@@ -84,7 +84,7 @@ sequence="2"/>
             <field name="member_id"/>
             <field name="amount"/>
             <field name="disburse_date"/>
-            <field name="tenure"/>
+            
             <field name="stage"/>
         </tree>
     </field>
@@ -100,7 +100,7 @@ sequence="2"/>
             <field name="member_id"/>
             <field name="amount"/>
             <field name="disburse_date"/>
-            <field name="tenure"/>
+            
             <field name="stage"/>
             
             
