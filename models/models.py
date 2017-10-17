@@ -23,7 +23,7 @@ class ranchy_corps(models.Model):
 class ranchy_loans(models.Model):
     _name = 'ranchy.loans'
     loan_id = fields.Id
-    amount = fields.Monetary(string="Amount")
+    amount = fields.Monetary(string="Amount",currency_field='currency_id')
     disburse_date = fields.Date(string="Date of Disburse")
     member_id = fields.Many2one('members.ranchy', string="Member")
     tenure = fields.Char(string="loan tenure")
