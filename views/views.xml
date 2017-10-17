@@ -3,7 +3,7 @@
 <data>
     
     
-    <act_window id="ranchy.action_window" name="ranchy" res_model="members.ranchy" view_mode="tree,form"/>
+    <act_window id="ranchy.action_window" model="ir.actions.act_window" name="ranchy" res_model="members.ranchy" view_mode="tree,form"/>
     
     
     
