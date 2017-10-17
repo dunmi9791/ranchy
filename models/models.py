@@ -20,16 +20,7 @@ class ranchy_corps(models.Model):
     corps_leader = fields.One2many
     corps_staff = fields.One2many
     
-class ranchy_loans(models.Model):
-    _name = 'ranchy.loans'
-    loan_id = fields.Id
-    total_repayments = fields.Float(string="Total repayed")
-    balance = fields.Float(string="Outstanding Balance")
-    stage = fields.selection([('1st','2nd')])
-    amount = fields.Monetary(string="Amount",# optional: currency_field='currency_id')
-    disburse_date = fields.Date(string="Date of Disburse")
-    
-   
+
     
     
     
