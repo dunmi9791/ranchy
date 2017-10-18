@@ -38,7 +38,13 @@ class ranchy_loans(models.Model):
         # optional: currency_field='currency_id',
         )
     date_disburse = fields.Date('Date')
-    
+    member_id = fields.Many2one(
+        'members.ranchy', string='Member',
+        # optional:
+        ondelete='restrict',
+        context={},
+        domain=[],
+        )
     
        
 
