@@ -82,7 +82,14 @@ sequence="2"/>
     <field name="arch" type="xml">
         <tree string="ranchy loans">
             <!-- Add All Fields You Want In The List Here -->
+            <group>
+            <field name="amount_disburse"/>
+            <field name="date_disburse"/>
+            <field name="member_id"/>
+            <field name="stage"/>
             <field name="total_repayments"/>
+            <field name="amount_balance"/>
+            </group>
         </tree>
     </field>
 </record>
@@ -94,7 +101,12 @@ sequence="2"/>
     <field name="arch" type="xml">
         <form string="Form ranchy loans" version="7.0">
             <!-- Add All Fields You Want In The Form Here -->
-            <field name="total_repayments"/>
+            <group>
+            <field name="amount_disburse"/>
+            <field name="date_disburse"/>
+            <field name="member_id"/>
+            <field name="stage"/>
+            </group>
             
             
         </form>
