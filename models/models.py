@@ -29,7 +29,10 @@ class ranchy_loans(models.Model):
         'Total Repayments',
         # optional: currency_field='currency_id',
         )
-    
+    amount_disburse = fields.Monetary(
+        'Amount',
+        # optional: currency_field='currency_id',
+        )
     
     
     
