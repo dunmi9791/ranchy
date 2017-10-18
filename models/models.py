@@ -23,11 +23,12 @@ class ranchy_corps(models.Model):
 class ranchy_loans(models.Model):
     _name = 'ranchy.loans'
     loan_id = fields.Id
-    total_repayments = fields.Float(string="Total repayed")
-    balance = fields.Float(string="Outstanding Balance")
-    stage = fields.selection([('1st','2nd')])
-  
-    
+    currency_id = fields.Many2one(
+        'res.currency', string='Currency')
+    total_repayments = fields.Monetary(
+        'Total Repayments',
+        # optional: currency_field='currency_id',
+        )
     
     
     
