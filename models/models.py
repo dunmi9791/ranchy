@@ -33,11 +33,7 @@ class ranchy_loans(models.Model):
         'Amount',
         # optional: currency_field='currency_id',
         )
-    date_disburse = fields.date('Date')
-    amount_balance = fields.Monetary(
-        'balance',
-        # optional: currency_field='currency_id',
-        )
+    
     
     
     
