@@ -32,7 +32,8 @@
    </field>
    </record>
    
-   <!--  List View Definition for coperatives-->
+   
+<!--  List View Definition for coperatives-->
 <record id="view_corps_ranchy_tree" model="ir.ui.view">
     <field name="name">ranchy_tree</field>
     <field name="model">corps.ranchy</field>
@@ -73,6 +74,48 @@ id="action_menu_ranchy2"
 parent="ranchy.menu_root"
 name="coperative" 
 sequence="2"/>
+ 
+ <!--  List View Definition for loans-->
+<record id="view_loans_ranchy_tree" model="ir.ui.view">
+    <field name="name">ranchy_loan_tree</field>
+    <field name="model">ranchy.loans</field>
+    <field name="arch" type="xml">
+        <tree string="ranchy loans">
+            <!-- Add All Fields You Want In The List Here -->
+            <field name="total_repayments"/>
+        </tree>
+    </field>
+</record>
+
+<!-- Your Form View Definition -->
+<record id="view_ranchy_loans_form" model="ir.ui.view">
+    <field name="name">ranchy_loan_form</field>
+    <field name="model">ranchy.loans</field>
+    <field name="arch" type="xml">
+        <form string="Form ranchy loans" version="7.0">
+            <!-- Add All Fields You Want In The Form Here -->
+            <field name="total_repayments"/>
+            
+            
+        </form>
+    </field>
+</record>
+
+<!-- Your Action Window Definition -->
+<record id="action_ranchyloan" model="ir.actions.act_window">
+    <field name="name">ranchy</field>
+    <field name="res_model">ranchy.loans</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">list,form</field>
+</record>
+
+<!-- Action Menu Item Related To Above Action Window -->
+<menuitem 
+action="action_ranchyloan" 
+id="action_menu_ranchyloan" 
+parent="ranchy.menu_root"
+name="loans" 
+sequence="3"/>
  
 
         
