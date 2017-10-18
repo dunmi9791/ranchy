@@ -33,7 +33,10 @@ class ranchy_loans(models.Model):
         'Amount',
         # optional: currency_field='currency_id',
         )
-    
+    amount_balance = fields.Monetary(
+        'Balance',
+        # optional: currency_field='currency_id',
+        )
     
     
     
