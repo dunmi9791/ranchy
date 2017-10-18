@@ -37,7 +37,7 @@ class ranchy_loans(models.Model):
         'Balance',
         # optional: currency_field='currency_id',
         )
-    
+    date_disburse = fields.Date('Date')
     
     
        
