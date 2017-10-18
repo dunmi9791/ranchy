@@ -45,7 +45,9 @@ class ranchy_loans(models.Model):
         context={},
         domain=[],
         )
-    
+    stage = fields.Selection(
+        [('1st','First'), ('2nd','Second'),('3rd','third')],
+        'Stage')
        
 
     
