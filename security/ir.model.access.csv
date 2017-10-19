@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ranchy_ranchy,ranchy.ranchy,model_ranchy_members,,1,1,1,1
+access_ranchy_ranchy,ranchy.ranchy,model_members_ranchy,,1,1,1,1
