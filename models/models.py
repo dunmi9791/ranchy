@@ -49,8 +49,46 @@ class ranchy_loans(models.Model):
         [('1st','First'), ('2nd','Second'),('3rd','third')],
         'Stage')
        
-
+class loan_payments(models.Model):
+    _name = 'loan.payments'
+    loanpayments_id = fields.id
+    member_id = fields.Many2one('members.ranchy', string='Member')
+    loan_id = fields.Many2one('ranchy.loans', string='Loan')
+    currency_id = fields.Many2one(
+        'res.currency', string='Currency')
+    amount_repaid = fields.Monetary(
+        'Amount',
+        # optional: currency_field='currency_id',
+        )
+    date = fields.Date('Date')
+ 
+class savings_saved(models.Model):
+    _name = 'savings.saved'
+    saving_id = fields.id
+    member_id = fields.Many2one('members.ranchy', string='Member')
+    date = fields.Date('Date') 
+    currency_id = fields.Many2one(
+        'res.currency', string='Currency')
+    amount = fields.Monetary(
+        'Amount',
+        # optional: currency_field='currency_id',
+        )
+    balance = fields.Monetary(
+        'Balance',
+        # optional: currency_field='currency_id',
+        )
     
+class withdrawals(models.Model):
+    _name = 'withdrawals'
+    withdrawal_id = fields.id
+    member_id = fields.Many2one('members.ranchy', string='Member')
+    currency_id = fields.Many2one(
+        'res.currency', string='Currency')
+    amount = fields.Monetary(
+        'Amount',
+        # optional: currency_field='currency_id',
+        )
+    date = fields.Date('Date')    
     
 
 #     name = fields.Char()
