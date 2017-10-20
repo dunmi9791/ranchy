@@ -49,8 +49,8 @@ class ranchy_loans(models.Model):
         [('1st','First'), ('2nd','Second'),('3rd','third')],
         'Stage')
        
-class loan_payments(models.Model):
-    _name = 'loan.payments'
+class ranchy_repayments(models.Model):
+    _name = 'ranchy.repayments'
     loanpayments_id = fields.id
     member_id = fields.Many2one('members.ranchy', string='Member')
     loan_id = fields.Many2one('ranchy.loans', string='Loan')
@@ -62,8 +62,8 @@ class loan_payments(models.Model):
         )
     date = fields.Date('Date')
  
-class savings_saved(models.Model):
-    _name = 'savings.saved'
+class ranchy_saving(models.Model):
+    _name = 'ranchy.saving'
     saving_id = fields.id
     member_id = fields.Many2one('members.ranchy', string='Member')
     date = fields.Date('Date') 
@@ -78,8 +78,8 @@ class savings_saved(models.Model):
         # optional: currency_field='currency_id',
         )
     
-class withdrawals(models.Model):
-    _name = 'withdrawals'
+class ranchy_withdrawals(models.Model):
+    _name = 'ranchy.withdrawals'
     withdrawal_id = fields.id
     member_id = fields.Many2one('members.ranchy', string='Member')
     currency_id = fields.Many2one(
