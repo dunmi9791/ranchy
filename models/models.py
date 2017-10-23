@@ -6,12 +6,26 @@ class ranchy_members(models.Model):
     _name = 'members.ranchy'
     
     member_id = fields.Id
-    member_firstname = fields.Char(string="FirstName")
-    member_lastname = fields.Char(string="Last")
-    member_addresss = fields.Text(string="Address")
+    member_firstname = fields.Char(string="Name")
+    member_lastname = fields.Char(string="Name of father/husband")
+    member_addresss = fields.Char(string="Residential Address")
+    add_permanent = fields.Char(string="Pemanent Address")
+    business_addresss = fields.Char(string="Business Address")
     member_phone = fields.Char(string="phone number")
     member_pic = fields.Binary("image", help="select image here")
-    memberof = fields.Many2one('corps.ranchy')
+    member_age = fields.Char(string="Age")
+    marital_status = fields.Selection(
+        [('Single','Single'), ('married','married'),('divorced','Divorced'),('widow','widow')],
+        'Marital status')
+    education = fields.Selection(
+        [('none','None'), ('primary','Primary'),('secondary','Secondary'),('tertiary','Tertiary')],
+        'Formal Education')
+    next_kin = fields.Char(string="Next of Kin Name")
+    kin_phone = fields.Char(string="Next of Kin Phone")
+    memberof = fields.Many2one('corps.ranchy',string="name of group")
+    business_type = fields.Char(string="Type of Business")
+    business_period = fields.Char(string="How long in business")
+    average_income = fields.Char(string="Average monthly income")
     
 class ranchy_corps(models.Model): 
     _name = 'corps.ranchy'
