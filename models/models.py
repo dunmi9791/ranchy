@@ -30,6 +30,7 @@ class ranchy_members(models.Model):
     
 class ranchy_corps(models.Model): 
     _name = 'corps.ranchy'
+    _rec_name = 'corps_name'
     corps_id = fields.Id
     corps_name = fields.Char(string="name of coperative")
     corps_leader = fields.One2many
