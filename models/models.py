@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 class ranchy_members(models.Model):
     _name = 'members.ranchy'
+    _rec_name = 'member_firstname'
     
     member_id = fields.Id
     member_firstname = fields.Char(string="Name")
