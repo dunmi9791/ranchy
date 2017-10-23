@@ -113,9 +113,20 @@ sequence="2"/>
         <form string="Form ranchy loans" version="7.0">
             <!-- Add All Fields You Want In The Form Here -->
             <group>
-            <field name="amount_disburse"/>
-            <field name="date_disburse"/>
             <field name="member_id"/>
+            <field name="last_loan"/>
+            <field name="date_payed"/>
+            <field name="amount_applied"/>
+            <field name="amount_approved"/>
+            <field name="installments"/>
+            <field name="date_firstinstall"/>
+            <field name="date_finalinstall"/>
+            <field name="any_family"/>
+            <field name="if_true"/>
+            <field name="or_reg"/>
+            <field name="indebted"/>
+            <field name="if_true2"/>
+            <field name="if_true3"/>
             <field name="stage"/>
             </group>
             
