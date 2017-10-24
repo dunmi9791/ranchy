@@ -40,7 +40,13 @@ class ranchy_loans(models.Model):
     _name = 'ranchy.loans' 
     
     
-    
+    state = fields.Selection([
+            ('new', 'New Apllication'),
+            ('awaiting', 'awaiting approval'),
+            ('approve', 'awaiting disbursement'),
+            ('disburse', 'disbursed/repayment'),
+            ('paid', 'paid'),
+            ],default='new')
     loan_id = fields.Id
     currency_id = fields.Many2one(
         'res.currency', string='Currency')
