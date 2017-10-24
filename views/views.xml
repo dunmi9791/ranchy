@@ -83,7 +83,7 @@
 action="action_ranchy2" 
 id="action_menu_ranchy2" 
 parent="ranchy.menu_root"
-name="coperative" 
+name="Unions" 
 sequence="2"/>
  
  <!--  List View Definition for loans-->
@@ -112,6 +112,10 @@ sequence="2"/>
     <field name="arch" type="xml">
         <form string="Form ranchy loans" version="7.0">
             <!-- Add All Fields You Want In The Form Here -->
+            <header> 
+              <button string="Submit for approval" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '=', 'awaiting')]}"/>
+
+            </header>
             <group>
             <field name="member_id"/>
             <field name="last_loan"/>
