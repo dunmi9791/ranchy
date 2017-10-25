@@ -47,7 +47,12 @@ class ranchy_loans(models.Model):
             ('disburse', 'disbursed/repayment'),
             ('paid', 'paid'),
             ],default='new')
-    
+    #This function is triggered when the user clicks on the button 'Set to concept'
+    @api.one
+    def concept_progressbar(self):
+     self.write({
+        'state': 'awaiting',
+    })
     loan_id = fields.Id
     currency_id = fields.Many2one(
         'res.currency', string='Currency')
