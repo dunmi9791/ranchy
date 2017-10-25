@@ -116,7 +116,7 @@ sequence="2"/>
               <button string="Submit for approval" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '=', ['awaiting','approve','disburse','paid'])]}"/>
               <button string="Approve" type="object" name="approved_progressbar" class="oe_highlight" attrs="{'invisible': [('state','!=','awaiting')]}"/>
               <button string="Disburse" type="object" name="disburse_progressbar" attrs="{'invisible': [('state','!=','approve')]}"/>
-              <button string="Paid" type="object" name="paid_progressbar" attrs="{'invisible': [('state','=','disburse')]}"/>
+              <button string="Paid" type="object" name="paid_progressbar" attrs="{'invisible': [('state','!=','disburse')]}"/>
               <field name="state" widget="statusbar"/>
               
             </header>
