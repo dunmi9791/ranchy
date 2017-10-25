@@ -38,7 +38,7 @@ class ranchy_corps(models.Model):
     
 class ranchy_loans(models.Model):
     _name = 'ranchy.loans' 
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    
     
     state = fields.Selection([
             ('new', 'New Apllication'),
