@@ -93,7 +93,7 @@ sequence="2"/>
     <field name="arch" type="xml">
         <tree string="ranchy loans">
             <!-- Add All Fields You Want In The List Here -->
-            
+            <field name="amount_applied"/>
             <field name="amount_disburse"/>
             <field name="date_disburse"/>
             <field name="member_id"/>
@@ -134,6 +134,7 @@ sequence="2"/>
             <group>
             <field name="amount_applied"/>
             <field name="amount_approved"/>
+            <field name="amount_disburse"/>
             </group>
             <group>
             <field name="installments"/>
