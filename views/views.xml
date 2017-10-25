@@ -129,14 +129,7 @@ sequence="2"/>
             </h1>
             </div>
             </group>
-           <notebook>
-           <page string="Loan History">
-            <group name="Loan History">
-            <field name="last_loan"/>
-            <field name="date_payed"/>
-            </group>
-            </page>
-            </notebook>
+           
            
             <group>
             <field name="amount_applied"/>
@@ -147,6 +140,14 @@ sequence="2"/>
             <field name="date_firstinstall"/>
             <field name="date_finalinstall"/>
             </group>
+            <notebook>
+           <page string="Loan History">
+            <group name="Loan History">
+            <field name="last_loan"/>
+            <field name="date_payed"/>
+            </group>
+            </page>
+            </notebook>
             <group>
             <field name="any_family"/>
             <field name="if_true"/>
