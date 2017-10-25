@@ -97,7 +97,7 @@ sequence="2"/>
             <field name="amount_disburse"/>
             <field name="date_disburse"/>
             <field name="member_id"/>
-            <field name="stage"/>
+            <field name="state"/>
             <field name="total_repayments"/>
             <field name="amount_balance"/>
            
