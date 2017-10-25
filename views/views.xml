@@ -113,15 +113,21 @@ sequence="2"/>
         <form string="Form ranchy loans" version="7.0">
             <!-- Add All Fields You Want In The Form Here -->
             <header> 
-              <button string="Submit for approval" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '=', ['awaiting','approve','disburse','paid'])]}"/>
+              <button string="Submit for approval" class="oe_highlight" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '=', ['awaiting','approve','disburse','paid'])]}"/>
               <button string="Approve" type="object" name="approved_progressbar" class="oe_highlight" attrs="{'invisible': [('state','!=','awaiting')]}"/>
               <button string="Disburse" type="object" name="disburse_progressbar" attrs="{'invisible': [('state','!=','approve')]}"/>
               <button string="Paid" type="object" name="paid_progressbar" attrs="{'invisible': [('state','!=','disburse')]}"/>
               <field name="state" widget="statusbar"/>
               
             </header>
+            <sheet>
             <group>
+            <div class="oe_left oe_title">
+            <label for="member_id" />
+            <h1>
             <field name="member_id"/>
+            </h1>
+            </div>
             </group>
             <group>
             <field name="last_loan"/>
@@ -149,8 +155,12 @@ sequence="2"/>
             <group>
             <field name="stage"/>
             </group>
+            </sheet>
             
-            
+         <div class="oe_chatter">
+           <field name="message_follower_ids" widget="mail_followers"/>
+           <field name="message_ids" widget="mail_thread"/>
+         </div>
         </form>
     </field>
 </record>
