@@ -113,7 +113,7 @@ sequence="2"/>
         <form string="Form ranchy loans" version="7.0">
             <!-- Add All Fields You Want In The Form Here -->
             <header> 
-              <button string="Submit for approval" class="oe_highlight" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '=', ['awaiting','approve','disburse','paid'])]}"/>
+              <button string="Submit for approval" class="oe_highlight" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '!=', 'new')]}"/>
               <button string="Approve" type="object" name="approved_progressbar" class="oe_highlight" attrs="{'invisible': [('state','!=','awaiting')]}"/>
               <button string="Disburse" type="object" name="disburse_progressbar" attrs="{'invisible': [('state','!=','approve')]}"/>
               <button string="Paid" type="object" name="paid_progressbar" attrs="{'invisible': [('state','!=','disburse')]}"/>
