@@ -53,6 +53,24 @@ class ranchy_loans(models.Model):
      self.write({
         'state': 'awaiting',
     })
+     #This function is triggered when the user clicks on the button 'Set to started'
+    @api.one
+    def approved_progressbar(self):
+     self.write({
+    'state': 'approve'
+    })
+    #This function is triggered when the user clicks on the button 'In progress'
+    @api.one
+    def disburse_progressbar(self):
+     self.write({
+    'state': 'disburse'
+    })
+    #This function is triggered when the user clicks on the button 'Done'
+    @api.one
+    def paid_progressbar(self):
+     self.write({
+    'state': 'paid',
+    })
     loan_id = fields.Id
     currency_id = fields.Many2one(
         'res.currency', string='Currency')
