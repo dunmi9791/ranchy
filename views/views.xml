@@ -129,7 +129,7 @@ sequence="2"/>
             </h1>
             </div>
             </group>
-            <group>
+            <group name="Loan History">
             <field name="last_loan"/>
             <field name="date_payed"/>
             </group>
