@@ -2,4 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_ranchy_ranchy,ranchy.ranchy,model_members_ranchy,,1,1,1,1
 access_corps_ranchy,ranchy.corps,model_corps_ranchy,,1,1,1,1
 access_loans_ranchy,ranchy.loans,model_ranchy_loans,,1,1,1,1
-access_loans_ranchy,ranchy.repayments,model_ranchy_repayments,,1,1,1,1
+access_repayments_ranchy,ranchy.repayments,model_ranchy_repayments,,1,1,1,1
