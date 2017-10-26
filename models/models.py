@@ -27,6 +27,8 @@ class ranchy_members(models.Model):
     business_type = fields.Char(string="Type of Business")
     business_period = fields.Char(string="How long in business")
     average_income = fields.Char(string="Average monthly income")
+    loan_ids = fields.One2many('ranchy.loans', 'member_id', string='Loans')
+    
     
 class ranchy_corps(models.Model): 
     _name = 'corps.ranchy'
