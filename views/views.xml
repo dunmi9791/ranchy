@@ -27,21 +27,35 @@
              <field name="member_pic" widget='image' />
              <field name="member_firstname"/>
              <field name="member_lastname"/>
+             </group>
+             <notebook>
+             <page string="Contact Information">
+             <group>
              <field name="member_addresss"/>
              <field name="add_permanent"/>
              <field name="business_addresss"/>
              <field name="member_phone"/>
+             </group>
+             </page>
+             <page string="Member Data">
+             <group>
              <field name="member_age"/>
              <field name="marital_status"/>
              <field name="education"/>
              <field name="next_kin"/>
              <field name="kin_phone"/>
+             </group>
+             </page>
+             <page string="union and Business data">
+             <group>
              <field name="memberof"/>
              <field name="business_type"/>
              <field name="business_period"/>
              <field name="average_income"/>
              
              </group>
+             </page>
+             </notebook>
              </sheet>
            
            </form>
