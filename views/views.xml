@@ -16,12 +16,13 @@
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
         
-        <button type="action" class="oe_stat_button"
+       
+           <form>
+           <sheet>
+            <button type="action" class="oe_stat_button"
               icon="fa-pencil-square-o"  name="..." context="..." >
              <field name="loan_ids" widget="statinfo"/>
                </button>
-           <form>
-           <sheet>
              <group>
              <field name="member_pic" widget='image' />
              <field name="member_firstname"/>
