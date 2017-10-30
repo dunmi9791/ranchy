@@ -19,8 +19,8 @@
        
            <form>
            <sheet>
-            <button type="action" class="oe_stat_button"
-              icon="fa-pencil-square-o"  align="right" name="loansbutton" context="loans" >
+            <button type="object" class="oe_stat_button"
+              icon="fa-pencil-square-o"  align="right" name="show_loans" context="loans" >
              <field name="loan_ids" widget="statinfo"/>
                </button>
              <group>
