@@ -50,10 +50,10 @@ class ranchy_members(models.Model):
        'res_model': 'ranchy.loans',
        'view_type': 'form',
        'view_mode': 'form',
-       'view_id': view_id,
+       'view_id': 'view_id',
        'target': 'current',
-       'context': {'default_partner_id': client_id}
-     }
+       'context': {'default_partner_id': 'client_id'}
+    }
  
     return res
     
