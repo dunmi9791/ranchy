@@ -35,16 +35,16 @@ class ranchy_members(models.Model):
    Method to open create customer invoice form
    """
    # Get the client id from transport form
-    member_id = self.member_id
+     member_id = self.member_id
         
    #Initialize required parameters for opening the form view of invoice
    #Get the view ref. by paasing module & name of the required form
-    view_ref = self.env['ir.model.data'].get_object_reference('ranchy_loans')
-    view_id = view_ref[1] if view_ref else False
+     view_ref = self.env['ir.model.data'].get_object_reference('ranchy_loans')
+     view_id = view_ref[1] if view_ref else False
     
    #Let's prepare a dictionary with all necessary info to open create invoice form with          
    #customer/client pre-selected
-    res = {
+     res = {
        'type': 'ir.actions.act_window',
        'name': _('Customer Invoice'),
        'res_model': 'ranchy.loans',
@@ -53,7 +53,7 @@ class ranchy_members(models.Model):
        'view_id': view_id,
        'target': 'current',
        'context': {'default_partner_id': client_id}
-   }
+     }
  
     return res
     
