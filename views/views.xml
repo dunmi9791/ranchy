@@ -15,7 +15,7 @@
    
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
-        
+    <field eval="1" name="sequence"/>    
        
            <form>
            <sheet>
@@ -65,6 +65,7 @@
    
    <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
+    <field eval="2" name="sequence"/>
     <field name="model">members.ranchy</field>
     <field name="arch" type="xml">
         <form>
