@@ -78,7 +78,7 @@
 
 <record id="action_all_members_form"
         model="ir.actions.act_window.view">
-    
+    <field name="act_window_id" ref="action_all_members_form"
     <field name="view_id" ref="loans_all_members" />
     <field name="view_mode">form</field>
     <field name="sequence">10</field>
