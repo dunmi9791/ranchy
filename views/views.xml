@@ -78,7 +78,7 @@
     <field name="arch" type="xml">
         <form>
             <group>
-                <field name="loan_ids" />
+                <field name="loan_ids" widget='selection' />
             </group>
         </form>
     </field>
