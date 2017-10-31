@@ -19,8 +19,8 @@
        
            <form>
            <sheet>
-            <button type="object" class="oe_stat_button"
-              icon="fa-pencil-square-o"  align="right" name="show_loans" context="loans" >
+            <button type="action" class="oe_stat_button"
+              icon="fa-pencil-square-o"  align="right" name="action_all_members_form" context="loans" >
              <field name="loan_ids" widget="statinfo"/>
                </button>
              <group>
@@ -63,6 +63,25 @@
    </field>
    </record>
    
+   <record id="loans_all_members" model="ir.ui.view">
+    <field name="name">All Loans</field>
+    <field name="model">members.ranchy</field>
+    <field name="arch" type="xml">
+        <form>
+            <group>
+                <field name="loan_ids" />
+            </group>
+        </form>
+    </field>
+</record>
+
+<record id="action_all_members_form"
+        model="ir.actions.act_window.view">
+    <field name="act_window_id" ref="action_all_members" />
+    <field name="view_id" ref="loans_all_members" />
+    <field name="view_mode">form</field>
+    <field name="sequence">10</field>
+</record>
    
 <!--  List View Definition for coperatives-->
 <record id="view_corps_ranchy_tree" model="ir.ui.view">
