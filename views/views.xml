@@ -63,11 +63,7 @@
    </field>
    </record>
    
-   <act_window id="action_all_loans_member"
-            name="All loans"
-            res_model="members.ranchy"
-            view_mode="tree,form"
-             />
+  
    
    <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
@@ -90,6 +86,11 @@
     <field name="sequence">10</field>
 </record>
    
+    <act_window id="action_all_loans_member"
+            name="All loans"
+            res_model="members.ranchy"
+            view_mode="tree,form"
+             />
 <!--  List View Definition for coperatives-->
 <record id="view_corps_ranchy_tree" model="ir.ui.view">
     <field name="name">ranchy_tree</field>
