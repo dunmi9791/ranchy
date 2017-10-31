@@ -20,7 +20,7 @@
            <form>
            <sheet>
             <button type="action" class="oe_stat_button"
-              icon="fa-pencil-square-o"  align="right" name="%(action_all_members_form)d"  >
+              icon="fa-pencil-square-o"  align="right" name="%(action_all_loans)d"  >
              <field name="loan_ids" widget="statinfo"/>
                </button>
              <group>
