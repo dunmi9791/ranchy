@@ -68,11 +68,11 @@
     <field eval="2" name="sequence"/>
     <field name="model">members.ranchy</field>
     <field name="arch" type="xml">
-        <form>
+        <tree>
             <group>
                 <field name="loan_ids" />
             </group>
-        </form>
+        </tree>
     </field>
 </record>
 
@@ -80,7 +80,7 @@
         model="ir.actions.act_window.view">
     
     <field name="view_id" ref="loans_all_members" />
-    <field name="view_mode">form</field>
+    <field name="view_mode">tree</field>
     <field name="sequence">10</field>
 </record>
    
