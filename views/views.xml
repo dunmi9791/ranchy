@@ -15,7 +15,7 @@
    
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
-    <field eval="1" name="sequence"/>    
+        
        
            <form>
            <sheet>
