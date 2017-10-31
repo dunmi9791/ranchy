@@ -12,7 +12,7 @@
     
     
     <record id= "ranchy_members_template_form_view" model= "ir.ui.view">
-   
+   <field name="priority" eval="15"/>
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
         
@@ -65,14 +65,14 @@
    
    <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
-    <field eval="2" name="sequence"/>
+    
     <field name="model">members.ranchy</field>
     <field name="arch" type="xml">
-        <tree>
+        <form>
             <group>
                 <field name="loan_ids" />
             </group>
-        </tree>
+        </form>
     </field>
 </record>
 
@@ -80,7 +80,7 @@
         model="ir.actions.act_window.view">
     
     <field name="view_id" ref="loans_all_members" />
-    <field name="view_mode">tree</field>
+    <field name="view_mode">form</field>
     <field name="sequence">10</field>
 </record>
    
