@@ -67,6 +67,8 @@
             name="All loans"
             res_model="members.ranchy"
             view_mode="tree,form"
+            context="{'search_default_loan_ids: active_id,'default_loan_ids': active_id}"
+            domain="[('loan_ids', '=', active_id)]"
              />
    
    <record id="loans_all_members" model="ir.ui.view">
