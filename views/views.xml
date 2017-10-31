@@ -63,12 +63,12 @@
    </field>
    </record>
    
-      <act_window id="action_all_loans"
-            name="All loans"
-            res_model="members.ranchy"
-            view_mode="tree,form"
+      <record model="ir.actions.act_window" id="action_all_loans">
+       <field name="name">All Loans</field>     
+       <field name="model">members.ranchy</field>     
+        <field name="view_mode">tree,form</field>    
             
-             />
+        </record>
    
    <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
