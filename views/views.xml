@@ -63,7 +63,11 @@
    </field>
    </record>
    
-  
+      <act_window id="action_all_loans"
+            name="All loans"
+            res_model="members.ranchy"
+            view_mode="tree,form"
+             />
    
    <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
@@ -80,7 +84,7 @@
 
 <record id="action_all_members_form"
         model="ir.actions.act_window.view">
-    <field name="act_window_id" ref="action_all_members_form"/>
+    <field name="act_window_id" ref="action_all_loans"/>
     <field name="view_id" ref="loans_all_members" />
     <field name="view_mode">form</field>
     <field name="sequence">10</field>
