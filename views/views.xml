@@ -76,11 +76,17 @@
     
     <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
-        <search>
-            <group>
+        <search string="Search Contract">
+                    <field name="name" string="Loans"/>
+                    <field name="member_ids"/>
+                    <field name="amount_applied"/>
+                    <field name="date_disburse"/>
+                    <field name="total_repayments"/>
+                    <field name="amount_balance"/>
+                    <field name="state"/>
             <filter string="Current Member" name="current_member" domain="[('member_ids.active','=',True)]"/>
                     <separator/>
-            </group>
+            
         </search>
     </field>
 </record>
