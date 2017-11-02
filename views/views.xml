@@ -77,7 +77,7 @@
     <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
         <search string="Search Contract">
-                    <field name="name" string="Loans"/>
+                    
                     <field name="member_ids"/>
                     <field name="amount_applied"/>
                     <field name="date_disburse"/>
