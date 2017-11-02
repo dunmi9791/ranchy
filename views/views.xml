@@ -68,7 +68,7 @@
        <field name="model">ranchy.loans</field>     
         <field name="view_mode">tree,form,search</field>    
          <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
-          <field name="domain">[('member_ids', '=', active_id)</field>   
+          <field name="domain">[('member_ids', '=', active_id)]</field>   
         </record>
    
    <record id="loans_all_members" model="ir.ui.view">
