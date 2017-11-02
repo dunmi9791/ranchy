@@ -76,9 +76,11 @@
     
     <field name="model">members.ranchy</field>
     <field name="arch" type="xml">
-        <tree string="Loans">
+        <search string="Loans">
          <field name="loan_ids" modifiers="{}"/>
-        </tree>
+         <filter string="Current Member" name="current_member" domain="[('member_ids.active','=',True)]"/>
+                    <separator/>
+        </search>
     </field>
 </record>
 
