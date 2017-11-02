@@ -28,6 +28,22 @@ class ranchy_members(models.Model):
     business_period = fields.Char(string="How long in business")
     average_income = fields.Char(string="Average monthly income")
     loan_ids = fields.One2many('ranchy.loans', 'member_ids', string='Loans')
+    loan_id = fields.Many2one('rnchy.loans', compute='_compute_loan_id', string='Current Loan', help='Latest loan of member')
+    loan_count = fields.Integer(compute='_compute_loan_count', string='Loans')
+    
+    def _compute_loan_id(self):
+        """ get the lastest loan """
+        Loan = self.env['ranchy.loans']
+        for member in self:
+            member.loan_id = Loan.search([('member_id', '=', member.id)], order='date_start desc', limit=1)
+
+    def _compute_contracts_count(self):
+        # read_group as sudo, since contract count is displayed on form view
+        loan_data = self.env['ranchy.loans'].sudo().read_group([('member_id', 'in', self.ids)], ['member_id'], ['member_id'])
+        result = dict((data['member_id'][0], data['member_id_count']) for data in loan_data)
+        for member in self:
+            member.loan_count = result.get(member.id, 0)
+
     
     
    
