@@ -76,18 +76,9 @@
     
     <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
-        <search string="Search Contract">
-                    
-                    <field name="member_ids"/>
-                    <field name="amount_applied"/>
-                    
-                    <field name="total_repayments"/>
-                    <field name="amount_balance"/>
-                    <field name="state"/>
-                    <filter string="Current Member" name="current_member" domain="[('member_ids.active','=',True)]"/>
-                    <separator/>
-            
-        </search>
+        <tree string="Loans">
+         <field name="member_ids" modifiers="{}"/>
+        </tree>
     </field>
 </record>
 
