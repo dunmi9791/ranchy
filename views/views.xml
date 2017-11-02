@@ -80,7 +80,7 @@
             <group>
             <field name="amount_applied"/>
             <field name="amount_disburse"/>
-            <field name="date_disburse"/>
+            
             <field name="member_ids"/>
             <field name="state"/>
             <field name="total_repayments"/>
