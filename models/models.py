@@ -66,7 +66,7 @@ class ranchy_loans(models.Model):
             ('approve', 'awaiting disbursement'),
             ('disburse', 'disbursed/repayment'),
             ('paid', 'paid'),
-            ],default='new')
+            ],track_visibility='onchange',default='new')
     #This function is triggered when the user clicks on the button 'Set to concept'
     @api.one
     def concept_progressbar(self):
