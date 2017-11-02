@@ -67,7 +67,7 @@
        <field name="name">All Loans</field>     
        <field name="model">ranchy.loans</field>     
         <field name="view_mode">tree,form</field>    
-         <field name="context">{'search_default_member_id': active_id,'default_member_id': active_id}</field>
+         <field name="context">{'search_default_member_id': [active_id],'default_member_id': active_id}</field>
           <field name="domain">[('member_id', '=', active_id)]</field>   
         </record>
    
@@ -76,11 +76,11 @@
     
     <field name="model">members.ranchy</field>
     <field name="arch" type="xml">
-        <list>
+        <form>
             <group>
                 <field name="loan_ids"  />
             </group>
-        </list>
+        </form>
     </field>
 </record>
 
