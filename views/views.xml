@@ -145,7 +145,7 @@ sequence="2"/>
             <field name="amount_applied"/>
             <field name="amount_disburse"/>
             <field name="date_disburse"/>
-            <field name="member_id"/>
+            <field name="member_ids"/>
             <field name="state"/>
             <field name="total_repayments"/>
             <field name="amount_balance"/>
@@ -173,9 +173,9 @@ sequence="2"/>
             <sheet>
             <group>
             <div class="oe_left oe_title">
-            <label for="member_id" />
+            <label for="member_ids" />
             <h1>
-            <field name="member_id"/>
+            <field name="member_ids"/>
             </h1>
             </div>
             </group>
