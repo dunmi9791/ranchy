@@ -37,7 +37,7 @@ class ranchy_members(models.Model):
         for member in self:
             member.loan_id = Loan.search([('member_id', '=', member.id)], order='date_start desc', limit=1)
 
-    def _compute_contracts_count(self):
+    def _compute_loan_count(self):
         # read_group as sudo, since contract count is displayed on form view
         loan_data = self.env['ranchy.loans'].sudo().read_group([('member_id', 'in', self.ids)], ['member_id'], ['member_id'])
         result = dict((data['member_id'][0], data['member_id_count']) for data in loan_data)
