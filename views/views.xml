@@ -78,13 +78,7 @@
     <field name="arch" type="xml">
         <form>
             <group>
-            <field name="amount_applied"/>
-            <field name="amount_disburse"/>
             
-            <field name="member_ids"/>
-            <field name="state"/>
-            <field name="total_repayments"/>
-            <field name="amount_balance"/>
             </group>
         </form>
     </field>
@@ -145,6 +139,7 @@ sequence="2"/>
 <record id="view_loans_ranchy_tree" model="ir.ui.view">
     <field name="name">ranchy_loan_tree</field>
     <field name="model">ranchy.loans</field>
+    <field name="priority" eval="15"/>
     <field name="arch" type="xml">
         <tree string="ranchy loans">
             <!-- Add All Fields You Want In The List Here -->
