@@ -76,18 +76,19 @@
     
     <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
-        <form>
+        <search>
             <group>
-            
+            <filter string="Current Member" name="current_member" domain="[('member_ids.active','=',True)]"/>
+                    <separator/>
             </group>
-        </form>
+        </search>
     </field>
 </record>
 
 <record id="action_all_members_form"
         model="ir.actions.act_window.view">
     <field name="act_window_id" ref="action_all_loans"/>
-    <field name="view_id" ref="view_loans_ranchy_tree" />
+    <field name="view_id" ref="loans_all_members" />
     <field name="view_mode">form</field>
     <field name="sequence">10</field>
 </record>
