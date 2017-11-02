@@ -236,6 +236,8 @@ sequence="2"/>
     </field>
 </record>
 
+
+
 <!-- Your Action Window Definition -->
 <record id="action_ranchyloan" model="ir.actions.act_window">
     <field name="name">ranchy</field>
