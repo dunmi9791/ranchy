@@ -159,6 +159,7 @@ sequence="2"/>
 <record id="view_ranchy_loans_form" model="ir.ui.view">
     <field name="name">ranchy_loan_form</field>
     <field name="model">ranchy.loans</field>
+    <field name="priority" eval="15"/>
     <field name="arch" type="xml">
         <form string="Form ranchy loans" version="7.0">
             <!-- Add All Fields You Want In The Form Here -->
