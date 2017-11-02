@@ -78,7 +78,7 @@
     <field name="arch" type="xml">
         <search string="Loans">
          <field name="loan_ids" modifiers="{}"/>
-         <filter string="Current Member" name="current_member" domain="[('member_ids.active','=',True)]"/>
+         <filter string="Current Member" name="current_member" domain="[('loan_ids.active','=',True)]"/>
                     <separator/>
         </search>
     </field>
