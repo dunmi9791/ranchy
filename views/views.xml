@@ -77,7 +77,7 @@
     <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
         <tree string="Loans">
-         <field name="member_ids" modifiers="{}"/>
+         <field name="loan_ids" modifiers="{}"/>
         </tree>
     </field>
 </record>
