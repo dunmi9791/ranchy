@@ -27,7 +27,7 @@ class ranchy_members(models.Model):
     business_type = fields.Char(string="Type of Business")
     business_period = fields.Char(string="How long in business")
     average_income = fields.Char(string="Average monthly income")
-    loan_ids = fields.One2many('ranchy.loans', 'member_id', string='Loans')
+    loan_ids = fields.One2many('ranchy.loans', 'member_ids', string='Loans')
     
     
    
@@ -104,7 +104,7 @@ class ranchy_loans(models.Model):
         )
     date_payed = fields.Date('Date loan was fully paid')
     date_disburse = fields.Date('Date')
-    member_id = fields.Many2one(
+    member_ids = fields.Many2one(
         'members.ranchy', string='Member',
         # optional:
         ondelete='restrict',
