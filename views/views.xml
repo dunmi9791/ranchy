@@ -74,11 +74,11 @@
    <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
     
-    <field name="model">members.ranchy</field>
+    <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
         <form>
             <group>
-                <field name="loan_ids"  />
+                
             </group>
         </form>
     </field>
