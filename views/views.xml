@@ -46,7 +46,7 @@
              <field name="kin_phone"/>
              </group>
              </page>
-             <page string="union and Business data">
+             <page string="union and Business Information">
              <group>
              <field name="memberof"/>
              <field name="business_type"/>
