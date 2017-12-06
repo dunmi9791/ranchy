@@ -69,19 +69,7 @@
         <field name="view_mode">tree,form,search</field>    
          <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
           <field name="domain">[('loan_ids', '=', active_id)]</field>
-          <tree string="Loans">
-	         
-               <field name="amount_applied"/>
-              <field name="amount_disburse"/>
-              <field name="date_disburse"/>
-               <field name="member_ids"/>
-               <field name="state"/>
-               <field name="total_repayments"/>
-                <field name="amount_balance"/>
-              </tree>
-
-
-        </record>
+           </record>
    
 
 
