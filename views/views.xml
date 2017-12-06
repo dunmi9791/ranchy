@@ -71,18 +71,6 @@
           <field name="domain">[('loan_ids', '=', active_id)]</field>   
         </record>
    
-   <record id="loans_all_members" model="ir.ui.view">
-    <field name="name">All Loans</field>
-    
-    <field name="model">members.ranchy</field>
-    <field name="arch" type="xml">
-        <search string="Loans">
-         <field name="loan_ids" modifiers="{}"/>
-         <filter string="Current Member" name="current_member" domain="[('loan_ids.active','=',True)]"/>
-                    <separator/>
-        </search>
-    </field>
-</record>
 
 <record id="action_all_members_form"
         model="ir.actions.act_window.view">
