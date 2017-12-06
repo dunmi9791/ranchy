@@ -78,12 +78,8 @@
     <field name="model">ranchy.loans</field>
     <field name="arch" type="xml">
         <tree string="Payments">
-                    <field name="amount_applied"/>
-            <field name="amount_disburse"/>
-            <field name="member_ids"/>
-            <field name="state"/>
-            <field name="total_repayments"/>
-            
+                 
+
                 </tree>
     </field>
 </record>
