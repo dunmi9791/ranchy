@@ -83,7 +83,7 @@
             <field name="member_ids"/>
             <field name="state"/>
             <field name="total_repayments"/>
-            <field name="amount_balance"/>
+            
                 </tree>
     </field>
 </record>
