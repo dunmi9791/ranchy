@@ -81,7 +81,7 @@
                <field name="state"/>
                <field name="total_repayments"/>
                 <field name="amount_balance"/>
-</tree>
+              </tree>
 
 
         </record>
@@ -89,7 +89,7 @@
 
 
    
-    
+
 <!--  List View Definition for coperatives-->
 <record id="view_corps_ranchy_tree" model="ir.ui.view">
     <field name="name">ranchy_tree</field>
