@@ -93,7 +93,7 @@
     <field name="act_window_id" ref="action_all_loans"/>
     <field name="view_id" ref="loans_all_members" />
     <field name="view_mode">tree</field>
-    <field name="sequence">10</field>
+    <field name="sequence">50</field>
 </record>
    
 
