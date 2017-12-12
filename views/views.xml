@@ -80,7 +80,7 @@
 
             <field name="member_firstname"/>
              <field name="member_lastname"/>
-            
+
 
                 </tree>
     </field>
@@ -95,7 +95,7 @@
     <field name="arch" type="xml">
         <tree string="Payments">
 
-            <field name="loan_id"/>
+            <field name="loan_ids"/>
 
                 </tree>
     </field>
