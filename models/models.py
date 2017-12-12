@@ -35,7 +35,7 @@ class ranchy_members(models.Model):
         """ get the lastest loan """
         Loan = self.env['ranchy.loans']
         for member in self:
-            member.loan_id = Loan.search([('member_ids', '=', member.id)], order='date_start desc', limit=1)
+            member.loan_id = Loan.search([('member_ids', '=', member.id)], order='date_disburse desc', limit=1)
 
     def _compute_loan_count(self):
         # read_group as sudo, since contract count is displayed on form view
