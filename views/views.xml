@@ -79,7 +79,7 @@
     <field name="arch" type="xml">
         <tree string="Payments">
 
-            <field name="loan_ids"/>
+            <field name="loan_id"/>
 
                 </tree>
     </field>
