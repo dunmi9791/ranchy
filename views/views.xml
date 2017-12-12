@@ -75,16 +75,12 @@
 <record id="loans_all_members" model="ir.ui.view">
     <field name="name">All Loans</field>
 
-    <field name="model">ranchy.loans</field>
+    <field name="model">members.ranchy</field>
     <field name="arch" type="xml">
         <tree string="Payments">
-                    <field name="amount_applied"/>
-            <field name="amount_disburse"/>
-            <field name="date_disburse"/>
-            <field name="member_ids"/>
-            <field name="state"/>
-            <field name="total_repayments"/>
-            <field name="amount_balance"/>
+
+            <field name="loan_ids"/>
+
                 </tree>
     </field>
 </record>
