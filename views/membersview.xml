@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+   <act_window id="ranchy.action_window" res_model="members.ranchy" name="ranchy"  view_mode="tree,form"/>
+
+
+
+    <menuitem action="ranchy.action_window" name="ranchy" id="ranchy.menu_root" groups="base.group_user" sequence ="450"/>
+    <menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root" sequence="1"/>
+
+
+    <record id= "ranchy_members_template_form_view" model= "ir.ui.view">
+   <field name="priority" eval="15"/>
+   <field name="model">members.ranchy</field >
+   <field name="arch" type= "xml">
+
+
+           <form>
+           <sheet>
+            <button type="action" class="oe_right oe_stat_button"
+              icon="fa-pencil-square-o"  align="right" name="%(action_all_loans)d"  >
+             <field name="loan_count" widget="statinfo"/>
+               </button>
+             <group>
+             <field name="member_pic" widget='image' />
+             <field name="member_firstname"/>
+             <field name="member_lastname"/>
+             </group>
+             <notebook>
+             <page string="Contact Information">
+             <group>
+             <field name="member_addresss"/>
+             <field name="add_permanent"/>
+             <field name="business_addresss"/>
+             <field name="member_phone"/>
+             </group>
+             </page>
+             <page string="Member Data">
+             <group>
+             <field name="member_age"/>
+             <field name="marital_status"/>
+             <field name="education"/>
+             <field name="next_kin"/>
+             <field name="kin_phone"/>
+             </group>
+             </page>
+             <page string="union and Business Information">
+             <group>
+             <field name="memberof"/>
+             <field name="business_type"/>
+             <field name="business_period"/>
+             <field name="average_income"/>
+
+             </group>
+             </page>
+             </notebook>
+             </sheet>
+
+           </form>
+
+   </field>
+   </record>
+
+      <record model="ir.actions.act_window" id="action_all_loans">
+       <field name="name">All Loans</field>
+       <field name="model">ranchy.loans</field>
+        <field name="view_mode">tree,form,search</field>
+         <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
+          <field name="domain">[('loan_ids', '=', active_id)]</field>
+           </record>
+
+    <record id="loans_all_members2" model="ir.ui.view">
+    <field name="name">All Members</field>
+
+    <field name="model">members.ranchy</field>
+    <field name="arch" type="xml">
+        <tree string="Members">
+
+            <field name="member_firstname"/>
+             <field name="member_lastname"/>
+
+
+                </tree>
+    </field>
+</record>
+
+
+
+<record id="loans_all_members" model="ir.ui.view">
+    <field name="name">All Loans</field>
+
+    <field name="model">members.ranchy</field>
+    <field name="arch" type="xml">
+        <tree string="Payments">
+
+            <field name="date_disburse"/>
+
+                </tree>
+    </field>
+</record>
+
+<record id="action_all_members_tree"
+        model="ir.actions.act_window.view">
+    <field name="act_window_id" ref="ranchy.action_window"/>
+    <field name="view_id" ref="loans_all_members2" />
+    <field name="view_mode">tree</field>
+    <field name="sequence">50</field>
+</record>
+
+
+<record id="action_all_members_form"
+        model="ir.actions.act_window.view">
+    <field name="act_window_id" ref="action_all_loans"/>
+    <field name="view_id" ref="loans_all_members" />
+    <field name="view_mode">tree</field>
+    <field name="sequence">50</field>
+</record>
+
+
+
+
+
+
+</data>
+</odoo>
