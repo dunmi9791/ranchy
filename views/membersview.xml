@@ -5,17 +5,7 @@
     <!--  action window for ranchy and members -->
    <act_window id="ranchy.action_window" res_model="members.ranchy" name="ranchy"  view_mode="tree,form"/>
 
-     <!--  Action for loans button-->
-
-
-     <record model="ir.actions.act_window" id="action_all_loans">
-       <field name="name">All Loans</field>
-       <field name="model">members.ranchy</field>
-        <field name="view_mode">tree,form,search</field>
-         <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
-          <field name="domain">[('loan_ids', '=', active_id)]</field>
-           </record>
-
+    
 
     <!--  menu items for ranchy and members-->
     <menuitem action="ranchy.action_window" name="ranchy" id="ranchy.menu_root" groups="base.group_user" sequence ="450"/>
