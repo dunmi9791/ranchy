@@ -3,24 +3,27 @@
 <data>
 
     <!--  action window for ranchy and members -->
-<act_window id="ranchy.action_window" res_model="members.ranchy" name="ranchy"  view_mode="tree,form"/>
-
+   <act_window id="ranchy.action_window" res_model="members.ranchy" name="ranchy"  view_mode="tree,form"/>
 
 
     <!--  menu items for ranchy and members-->
-<menuitem action="ranchy.action_window" name="ranchy" id="ranchy.menu_root" groups="base.group_user" sequence ="450"/>
-<menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root" sequence="1"/>
+    <menuitem action="ranchy.action_window" name="ranchy" id="ranchy.menu_root" groups="base.group_user" sequence ="450"/>
+    <menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root" sequence="1"/>
 
     <!--  Form View for members-->
-<record id= "ranchy_members_template_form_view" model= "ir.ui.view">
-      <field name="priority" eval="15"/>
-      <field name="model">members.ranchy</field >
-      <field name="arch" type= "xml">
+    <record id= "ranchy_members_template_form_view" model= "ir.ui.view">
+   <field name="priority" eval="15"/>
+   <field name="model">members.ranchy</field >
+   <field name="arch" type= "xml">
 
 
            <form>
            <sheet>
-                  <group>
+            <button type="action" class="oe_right oe_stat_button"
+              icon="fa-pencil-square-o"  align="right" name="%(action_all_loans)d"  >
+             <field name="loan_count" widget="statinfo"/>
+               </button>
+             <group>
              <field name="member_pic" widget='image' />
              <field name="member_firstname"/>
              <field name="member_lastname"/>
@@ -58,16 +61,15 @@
            </form>
 
    </field>
- </record>
+   </record>
 
-<record model="ir.actions.act_window" id="action_all_loans">
+      <record model="ir.actions.act_window" id="action_all_loans">
        <field name="name">All Loans</field>
        <field name="model">ranchy.loans</field>
         <field name="view_mode">tree,form,search</field>
          <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
           <field name="domain">[('loan_ids', '=', active_id)]</field>
            </record>
-
 
     <record id="loans_all_members2" model="ir.ui.view">
     <field name="name">All Members</field>
