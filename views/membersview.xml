@@ -10,7 +10,7 @@
 
      <record model="ir.actions.act_window" id="action_all_loans">
        <field name="name">All Loans</field>
-       <field name="model">ranchy.loans</field>
+       <field name="model">members.ranchy</field>
         <field name="view_mode">tree,form,search</field>
          <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
           <field name="domain">[('loan_ids', '=', active_id)]</field>
