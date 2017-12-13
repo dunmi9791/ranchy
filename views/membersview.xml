@@ -20,11 +20,7 @@
 
            <form>
            <sheet>
-            <button type="action" class="oe_right oe_stat_button"
-              icon="fa-pencil-square-o"  align="right" name="%(action_all_loans)d"  >
-             <field name="loan_count" widget="statinfo"/>
-               </button>
-             <group>
+                  <group>
              <field name="member_pic" widget='image' />
              <field name="member_firstname"/>
              <field name="member_lastname"/>
@@ -72,7 +68,7 @@
           <field name="domain">[('loan_ids', '=', active_id)]</field>
            </record>
 
-    
+
     <record id="loans_all_members2" model="ir.ui.view">
     <field name="name">All Members</field>
 
