@@ -62,7 +62,10 @@
 
    </field>
    </record>
-   <!--  Action for loans button-->
+
+    <!--  Action for loans button-->
+
+
      <record model="ir.actions.act_window" id="action_all_loans">
        <field name="name">All Loans</field>
        <field name="model">ranchy.loans</field>
