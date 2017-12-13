@@ -62,8 +62,14 @@
 
    </field>
    </record>
-
-     
+   <!--  Action for loans button-->
+     <record model="ir.actions.act_window" id="action_all_loans">
+       <field name="name">All Loans</field>
+       <field name="model">ranchy.loans</field>
+        <field name="view_mode">tree,form,search</field>
+         <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
+          <field name="domain">[('loan_ids', '=', active_id)]</field>
+           </record>
 
     <record id="loans_all_members2" model="ir.ui.view">
     <field name="name">All Members</field>
