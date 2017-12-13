@@ -29,6 +29,8 @@ class ranchy_members(models.Model):
     business_period = fields.Char(string="How long in business")
     average_income = fields.Char(string="Average monthly income")
     loan_ids = fields.One2many('ranchy.loans', 'member_ids', string='Loans', store='true')
+    date_disburse = fields.Date('Date', related='loan_ids.date_disburse')
+
     loan_id = fields.Many2one('ranchy.loans', compute='_compute_loan_id', string='Current Loan', store='true',
                               help='Latest loan of member')
     loan_count = fields.Integer(compute='_compute_loan_count', string='Loans')
