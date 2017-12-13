@@ -113,7 +113,7 @@
 <record id="action_all_members_form"
         model="ir.actions.act_window.view">
     <field name="act_window_id" ref="action_all_loans"/>
-    <field name="view_id" ref="loans_all_members" />
+    <field name="view_id" ref="view_loans_ranchy_tree" />
     <field name="view_mode">tree</field>
     <field name="sequence">50</field>
 </record>
@@ -255,8 +255,19 @@ sequence="2"/>
     </field>
 </record>
 
+<record id="view_ranchy_loans_search" model="ir.ui.view">
+    <field name="name">ranchy_loan_search</field>
+    <field name="model">ranchy.loans</field>
+    <field name="priority" eval="15"/>
+    <field name="arch" type="xml">
+        <search string=" ranchy loans" version="7.0">
+            <!-- Add All Fields You Want In The Form Here -->
 
 
+
+        </search>
+</field>
+</record>
 <!-- Your Action Window Definition -->
 <record id="action_ranchyloan" model="ir.actions.act_window">
     <field name="name">ranchy</field>
