@@ -11,10 +11,18 @@
     <menuitem action="ranchy.action_window" name="Members" id="ranchy.members" parent="ranchy.menu_root" sequence="1"/>
 
     <!--  Form View for members-->
-    <record id= "ranchy_members_template_form_view" model= "ir.ui.view">
+<record id= "ranchy_members_template_form_view" model= "ir.ui.view">
    <field name="priority" eval="15"/>
    <field name="model">members.ranchy</field >
    <field name="arch" type= "xml">
+ <record model="ir.actions.act_window" id="action_all_loans">
+       <field name="name">All Loans</field>
+       <field name="model">ranchy.loans</field>
+        <field name="view_mode">tree,form,search</field>
+         <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
+          <field name="domain">[('loan_ids', '=', active_id)]</field>
+           </record>
+
 
 
            <form>
@@ -63,13 +71,6 @@
    </field>
    </record>
 
-      <record model="ir.actions.act_window" id="action_all_loans">
-       <field name="name">All Loans</field>
-       <field name="model">ranchy.loans</field>
-        <field name="view_mode">tree,form,search</field>
-         <field name="context">{'search_default_member_ids': [active_id],'default_member_ids': active_id}</field>
-          <field name="domain">[('loan_ids', '=', active_id)]</field>
-           </record>
 
     <record id="loans_all_members2" model="ir.ui.view">
     <field name="name">All Members</field>
