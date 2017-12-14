@@ -52,13 +52,6 @@
 </record>
 
 
-<record id="action_all_members_form"
-        model="ir.actions.act_window.view">
-    <field name="act_window_id" ref="action_all_loans"/>
-    <field name="view_id" ref="loans_all_members" />
-    <field name="view_mode">tree</field>
-    <field name="sequence">50</field>
-</record>
 
 
 
